@@ -1,5 +1,5 @@
 import sys
-import logging
+from src.logger import logging
 def error_message_detail(error,error_detail:sys):## here Error _detail is of sys type so it is written like that
     _,_,exc_tb = error_detail.exc_info() ## Where at what line does exception has occured
     file_name = exc_tb.tb_frame.f_code.co_filename ## this line gives you file name
@@ -15,3 +15,4 @@ class CustomException(Exception):
 
     def __str__(self):
         return self.error_message
+    
